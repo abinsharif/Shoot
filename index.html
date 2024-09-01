@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-light">
+
+    <div id="stats-container" class="d-flex justify-content-around">
+        <div id="base-health">Base Health: 100</div>
+        <div id="score">Score: 0</div>
+        <div id="level">Level: 1</div>
+        <div id="money">Money: $0</div>
+    </div>
+
+    <div id="upgrade-container" class="d-flex justify-content-around">
+        <button id="upgrade-speed" class="btn btn-warning">Upgrade Speed ($100)</button>
+        <button id="upgrade-reload" class="btn btn-warning">Upgrade Reload ($100)</button>
+        <button id="upgrade-range" class="btn btn-warning">Upgrade Range (Sword) ($100)</button>
+        <button id="upgrade-bullet-number" class="btn btn-warning">Upgrade Bullet Number (Shotgun) ($100)</button>
+        <button id="upgrade-bullet-speed" class="btn btn-warning">Upgrade Bullet Speed ($100)</button>
+    </div>
+
+    <div id="game-container" class="mx-auto">
+        <div id="player"></div>
+        <div id="enemy-container"></div>
+    </div>
+
+    <div id="weapon-table" class="table-responsive">
+        <table class="table table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th> <th>7</th> <th>8</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sword</td> <td>Crossbow</td> <td>Pistol</td> <td>Rifle</td> <td>Spear</td> <td>Shotgun</td> <td>Bomb</td> <td>Machinegun</td>
+                </tr>
+                <tr>
+                    <td id="weapon-1">Unlocked<br>Speed: 10<br>Ability: Melee</td>
+                    <td id="weapon-2">Locked<br>Speed: 12<br>Ability: Piercing Arrow</td>
+                    <td id="weapon-3">Unlocked<br>Speed: 15<br>Ability: Basic Shooting</td>
+                    <td id="weapon-4">Locked<br>Speed: 20<br>Ability: Long Range</td>
+                    <td id="weapon-5">Locked<br>Speed: 18<br>Ability: Throwing Spear</td>
+                    <td id="weapon-6">Locked<br>Speed: 12<br>Ability: Spread Shot</td>
+                    <td id="weapon-7">Locked<br>Speed: 8<br>Ability: Explosion</td>
+                    <td id="weapon-8">Locked<br>Speed: 25<br>Ability: Rapid Fire</td>
+                </tr>
+            </tbody>
+        </table>        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

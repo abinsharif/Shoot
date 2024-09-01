@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoot - Game Over</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="end-game">
+        <h1>Game Over</h1>
+        <p id="final-score">Final Score: 0</p>
+        <p id="final-level">Final Level: 0</p>
+        <button onclick="replay()">Replay</button>
+    </div>
+    <script>
+        document.getElementById('final-score').textContent = `Final Score: ${localStorage.getItem('finalScore')}`;
+        document.getElementById('final-level').textContent = `Final Level: ${localStorage.getItem('finalLevel')}`;
+
+        function replay() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
