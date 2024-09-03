@@ -6,6 +6,40 @@
     <title>Shoot</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #upgrade-container button {
+            white-space: nowrap;
+            width: 100%;
+        }
+        #stats-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            z-index: 1;
+        }
+        #game-container {
+            position: fixed;
+            top: 50px;
+            left: 25%;
+            height: 80vh;
+            background-color: #444;
+            padding: 10px;
+            z-index: 1;
+        }
+        #upgrade-container {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 25%;
+            height: 80vh;
+            background-color: #444;
+            padding: 10px;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body class="bg-dark text-light">
 
@@ -16,17 +50,19 @@
         <div id="money">Money: $0</div>
     </div>
 
-    <div id="upgrade-container" class="d-flex justify-content-around">
-        <button id="upgrade-speed" class="btn btn-warning">Upgrade Speed ($100)</button>
-        <button id="upgrade-reload" class="btn btn-warning">Upgrade Reload ($100)</button>
-        <button id="upgrade-range" class="btn btn-warning">Upgrade Range (Sword) ($100)</button>
-        <button id="upgrade-bullet-number" class="btn btn-warning">Upgrade Bullet Number (Shotgun) ($100)</button>
-        <button id="upgrade-bullet-speed" class="btn btn-warning">Upgrade Bullet Speed ($100)</button>
+    <div id="upgrade-container" class="d-flex flex-column">
+        <button id="upgrade-base" class="btn btn-warning mb-2">Upgrade Base Health<br>cost:100</button>
+        <button id="upgrade-reload" class="btn btn-warning mb-2">Upgrade Reload<br>cost:100</button>
+        <button id="upgrade-damage" class="btn btn-warning mb-2">Upgrade Damage<br>cost:100</button>
+        <button id="upgrade-bulwid" class="btn btn-warning mb-2">Upgrade Bullet Width<br>cost:100</button>
+        <button id="upgrade-bulsp" class="btn btn-warning mb-2">Upgrade Bullet Speed<br>cost:100</button>
     </div>
 
-    <div id="game-container" class="mx-auto">
-        <div id="player"></div>
-        <div id="enemy-container"></div>
+    <div class="col-md-9 mx-auto">
+        <div id="game-container">
+            <div id="player"></div>
+            <div id="enemy-container"></div>
+        </div>
     </div>
 
     <div id="weapon-table" class="table-responsive">
